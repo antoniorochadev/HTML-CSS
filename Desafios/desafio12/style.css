@@ -70,3 +70,7 @@ footer{
     display: block;
     margin: 0%;
 }
+
+footer p{
+    margin: 0;
+}
