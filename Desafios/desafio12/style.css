@@ -4,27 +4,30 @@
 
 :root{
     --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
-    --font-destaque: passion one, cursive;
-    --font-corpo: sriracha, cursive;
+    --font-destaque: 'passion one', cursive;
+    --font-corpo: 'sriracha', cursive;
 }
 
-body{
-    min-height: 100vh;
-    background-color: white;
+*{
     margin: 0;
-   
+    padding: 0;
+}
+
+html, body{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+    font-family: var(--fonte-padrao); 
 }
 
 header{
    
     background-color: black;
-
 }
 
 header h1{
     color: white;
     padding-top: 50px;
-    margin: 0;
     font-family: var(--font-destaque);
     font-variant: small-caps;
     font-size: 10vw;
@@ -40,8 +43,7 @@ header p{
     font-size: 16px;
     font-weight: normal;
     text-align: center;
-    padding: 0px 0px  50px;
-    margin: 0;
+    padding-bottom:50px;
 }
 
 a{
@@ -49,16 +51,57 @@ a{
     font-weight: bold;
     color: white;
     text-decoration: none;
-
 }
+
+a:hover{
+    text-decoration: underline;
+}
+
 section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2;
+    padding-left: 30px;
     font-family: var(--font-corpo);
     font-size: 3.5vw;
-    line-height: 2;
-    padding:60px 0px 60px 30px
-    
+}
 
+section > p{
+    padding-bottom: 2em;
+}
+
+
+section.texto{
+    background-color: white;
     
+}
+
+section.imagem{
+    background-color: gray;
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.384);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+section.imagem > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: #00000070;
+    text-shadow: 1px 1px 0px #000000;
+    
+}
+
+section.imagem#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+  
+}
+
+section.imagem#img02{
+    background-image: url(imagens/background002.jpg);
+     
 }
 
 footer{
@@ -67,10 +110,6 @@ footer{
     font-family: var(--fonte-padrao);
     text-align: center;
     padding: 10px;
-    display: block;
-    margin: 0%;
+    
 }
 
-footer p{
-    margin: 0;
-}
